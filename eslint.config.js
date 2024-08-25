@@ -12,13 +12,17 @@ export default [
       ecmaVersion: 2020,
       globals: {
         ...globals.browser,
-        ...globals.node,
       },
       parserOptions: {
         ecmaVersion: 'latest',
         ecmaFeatures: { jsx: true },
         sourceType: 'module',
       },
+    },
+    env: {
+      browser: true, // Enables browser global variables
+      es2020: true,  // Enables ES2020 globals and syntax
+      node: true,    // Enables Node.js global variables (e.g., `require`)
     },
     
     settings: { react: { version: '18.3' } },
@@ -37,7 +41,7 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
-       "react/prop-types":"off"
+      
     },
     
   },
